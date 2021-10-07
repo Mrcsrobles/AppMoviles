@@ -1,17 +1,13 @@
 package com.example.esquizofrenico;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.EditText;
-import android.widget.Switch;
 import android.widget.TextView;
 
-import com.example.esquizofrenico.models.QuestionsText;
+import androidx.appcompat.app.AppCompatActivity;
 
-import java.util.ArrayList;
+import java.util.Objects;
 
 public class ScoreActivity extends AppCompatActivity {
 
@@ -25,7 +21,7 @@ public class ScoreActivity extends AppCompatActivity {
             setTheme(R.style.LightTheme);
         }
         setContentView(R.layout.score_quizz);
-        getSupportActionBar().hide();
+        Objects.requireNonNull(getSupportActionBar()).hide();
         fillData();
     }
 
@@ -38,7 +34,6 @@ public class ScoreActivity extends AppCompatActivity {
         points.setVisibility(View.VISIBLE);
 
     }
-
 
 
     public void restartGame(View view) {

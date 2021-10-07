@@ -11,14 +11,14 @@
         android:id="@+id/acierto"
         android:layout_width="130pt"
         android:layout_height="30pt"
+        android:layout_gravity="center|right"
         android:background="#E2EAE3E3"
+        android:gravity="center|right"
         android:text="@string/Acierto"
         android:textAlignment="center"
         android:textColor="@color/colorRight"
         android:textSize="25sp"
         android:visibility="invisible"
-        android:layout_gravity="center|right"
-        android:gravity="center|right"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -30,20 +30,19 @@
         android:id="@+id/fallo"
         android:layout_width="130pt"
         android:layout_height="30pt"
+        android:layout_gravity="center|right"
         android:background="#E2EAE3E3"
+        android:gravity="center|right"
         android:text="@string/Fallo"
         android:textAlignment="center"
         android:textColor="@color/colorWrong"
         android:textSize="25sp"
         android:visibility="invisible"
-        android:layout_gravity="center|right"
-        android:gravity="center|right"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.32999998" />
-
 
 
     <TextView
@@ -68,9 +67,9 @@
         android:layout_width="120dp"
         android:layout_height="46dp"
         android:background="@drawable/drawable"
+        android:enabled="false"
         android:onClick="nextQuestion"
         android:text="@string/Next"
-        android:enabled="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.917"
@@ -151,33 +150,33 @@
             android:id="@+id/checkBox1"
             android:layout_width="match_parent"
             android:layout_height="60dp"
+            android:buttonTint="#010315"
             android:text="@string/Answer12"
-            android:textColor="?attr/textColor"
-            android:buttonTint="#010315" />
+            android:textColor="?attr/textColor" />
 
         <CheckBox
             android:id="@+id/checkBox2"
             android:layout_width="match_parent"
             android:layout_height="60dp"
+            android:buttonTint="#010315"
             android:text="@string/Answer22"
-            android:textColor="?attr/textColor"
-            android:buttonTint="#010315" />
+            android:textColor="?attr/textColor" />
 
         <CheckBox
             android:id="@+id/checkBox3"
             android:layout_width="match_parent"
             android:layout_height="60dp"
+            android:buttonTint="#010315"
             android:text="@string/Answer32"
-            android:textColor="?attr/textColor"
-            android:buttonTint="#010315" />
+            android:textColor="?attr/textColor" />
 
         <CheckBox
             android:id="@+id/checkBox4"
             android:layout_width="match_parent"
             android:layout_height="59dp"
+            android:buttonTint="#010315"
             android:text="@string/Answer42"
-            android:textColor="?attr/textColor"
-            android:buttonTint="#010315" />
+            android:textColor="?attr/textColor" />
     </LinearLayout>
 
     <ImageView
@@ -195,13 +194,13 @@
         android:id="@+id/tusRespuestas"
         android:layout_width="match_parent"
         android:layout_height="50pt"
-        android:text="@string/RESPUESTAS"
-        android:textSize="40sp"
-        android:visibility="invisible"
         android:layout_gravity="center|right"
         android:gravity="center|right"
+        android:text="@string/RESPUESTAS"
         android:textAlignment="center"
-        app:layout_constraintTop_toTopOf="parent"/>
+        android:textSize="40sp"
+        android:visibility="invisible"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ListView
         android:id="@+id/listview"

@@ -1,24 +1,19 @@
 package com.example.esquizofrenico;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.Switch;
-import android.widget.TextView;
 
-import com.example.esquizofrenico.models.QuestionsText;
-
-import org.w3c.dom.Text;
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
 
     public static boolean checked = false;
-    public static int score ;
+    public static int score;
     public static ArrayList<String> Answers;
 
     @Override
@@ -31,10 +26,10 @@ public class MainActivity extends AppCompatActivity {
         }
         setContentView(R.layout.activity_main);
         score = 0;
-        Answers  = new ArrayList<String>();
+        Answers = new ArrayList<>();
         Switch switchTheme = (Switch) findViewById(R.id.switchTheme);
         switchTheme.setChecked(checked);
-        getSupportActionBar().hide();
+        Objects.requireNonNull(getSupportActionBar()).hide();
         QuizzActivity.questionNumber = 0;
     }
 
@@ -49,11 +44,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void switchTheme(View view) {
-        if (checked) {
-            checked = false;
-        } else {
-            checked = true;
-        }
+        checked = !checked;
         recreate(); // en lugar de estar creando tantas activities por cada pregunta que haya, es mejor reutilizar la misma activity con este metodo, por lo que solo nos interesa actualizar el numero de pregunta correspondiente
     }
 
