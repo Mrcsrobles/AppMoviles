@@ -1,0 +1,68 @@
+<resources>
+    <string name="app_name">EsQUIZofrenico</string>
+    <string name="Points">PUNTUACION FINAL:</string>
+    <string name="Ask">Pregunta</string>
+    <string name="Next">Siguiente</string>
+    <string name="Finish">Finish</string>
+    <string name="SALIR">SALIR</string>
+    <string name="EMPEZAR">EMPEZAR</string>
+    <string name="REINTENTAR">REINTENTAR</string>
+    <string name="INICIO">MENU PRINCIPAL</string>
+    <string name="RESPUESTAS">RESPUESTAS SELECCIONADAS:</string>
+    <string name="Acierto">¡Respuesta correcta!</string>
+    <string name="Fallo">¡Respuesta incorrecta!</string>
+    <string name="Question1">¿Qué edad tenía el rey Juan Carlos cuando "accidentalmente" disparó a su hermano?</string>
+    <string name="Answer11">12</string>
+    <string name="Answer12">18</string>
+    <string name="Answer13">7</string>
+    <string name="Answer14">15</string>
+
+    <string name="Question2">¿Cuántos Grand Slams tiene Rafael Nadal?</string>
+    <string name="Answer21">20</string>
+    <string name="Answer22">18</string>
+    <string name="Answer23">19</string>
+    <string name="Answer24">22</string>
+
+    <string name="Question3">¿Quién asesinó al famoso dictador Hitler?</string>
+    <string name="Answer31">Stalin</string>
+    <string name="Answer32">Churchill</string>
+    <string name="Answer33">Hitler</string>
+    <string name="Answer34">Anuel</string>
+
+    <string name="Question4">¿En que año se creó la famosa máquina ENIAC?</string>
+    <string name="Answer41">1930</string>
+    <string name="Answer42">1943</string>
+    <string name="Answer43">1946</string>
+    <string name="Answer44">1960</string>
+
+    <string name="Question5">¿Cual de estos idiomas es el más hablado?</string>
+    <string name="Answer51">Español</string>
+    <string name="Answer52">Inglés</string>
+    <string name="Answer53">Árabe</string>
+    <string name="Answer54">Hindú</string>
+
+    <string name="Question6">¿Cuales de estos juegos han sido GOTY(Game Of The Year)?</string>
+    <string name="Answer61">League Of Legends</string>
+    <string name="Answer62">Buscaminas</string>
+    <string name="Answer63">The Witcher 3</string>
+    <string name="Answer64">God of War</string>
+
+    <string name="Question7">¿Quienes de estos personajes se iban de Los Simpsons?</string>
+    <string name="Answer71">Moe Szyslak</string>
+    <string name="Answer72">Apu Nahasapeemapetilon</string>
+    <string name="Answer73">Barney Gumble</string>
+    <string name="Answer74">Ned Flanders</string>
+
+    <string name="Question8">¿A que país pertenece esta bandera?</string>
+    <string name="Answer81">España</string>
+    <string name="Answer82">Argentina</string>
+    <string name="Answer83">Rusia</string>
+    <string name="Answer84">Nicaragua</string>
+
+    <string name="Question9">¿Quién pintó este magnífico cuadro?</string>
+    <string name="Answer91">Leonardo Da Vinci</string>
+    <string name="Answer92">Leonardo DiCaprio</string>
+    <string name="Answer93">Lionel Messi</string>
+    <string name="Answer94">Leonardo De Deus</string>
+
+</resources>

@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/bgColor"
+    tools:context=".QuizzActivity">
+
+    <TextView
+        android:id="@+id/acierto"
+        android:layout_width="130pt"
+        android:layout_height="30pt"
+        android:background="#E2EAE3E3"
+        android:text="@string/Acierto"
+        android:textAlignment="center"
+        android:textColor="@color/colorRight"
+        android:textSize="25sp"
+        android:visibility="invisible"
+        android:layout_gravity="center|right"
+        android:gravity="center|right"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.32999998" />
+
+
+    <TextView
+        android:id="@+id/fallo"
+        android:layout_width="130pt"
+        android:layout_height="30pt"
+        android:background="#E2EAE3E3"
+        android:text="@string/Fallo"
+        android:textAlignment="center"
+        android:textColor="@color/colorWrong"
+        android:textSize="25sp"
+        android:visibility="invisible"
+        android:layout_gravity="center|right"
+        android:gravity="center|right"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.32999998" />
+
+
+
+    <TextView
+        android:id="@+id/id_pregunta"
+        android:layout_width="334dp"
+        android:layout_height="128dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/Ask"
+        android:textColor="?attr/textColor"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.056"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/next_question"
+        android:layout_width="120dp"
+        android:layout_height="46dp"
+        android:background="@drawable/drawable"
+        android:onClick="nextQuestion"
+        android:text="@string/Next"
+        android:enabled="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.917"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.948" />
+
+    <Button
+        android:id="@+id/last_question"
+        android:layout_width="120dp"
+        android:layout_height="46dp"
+        android:background="@drawable/drawable"
+        android:onClick="nextQuestion"
+        android:text="@string/Finish"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.917"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.948" />
+
+    <RadioGroup
+        android:id="@+id/GroupId"
+        android:layout_width="363dp"
+        android:layout_height="240dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id_pregunta">
+
+        <RadioButton
+            android:id="@+id/radioButton1"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:buttonTint="#010315"
+            android:text="@string/Answer11"
+            android:textColor="?attr/textColor" />
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:buttonTint="#010315"
+            android:text="@string/Answer21"
+            android:textColor="?attr/textColor" />
+
+        <RadioButton
+            android:id="@+id/radioButton3"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:buttonTint="#010315"
+            android:text="@string/Answer31"
+            android:textColor="?attr/textColor" />
+
+        <RadioButton
+            android:id="@+id/radioButton4"
+            android:layout_width="match_parent"
+            android:layout_height="59dp"
+            android:buttonTint="#010315"
+            android:text="@string/Answer41"
+            android:textColor="?attr/textColor" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/GroupId2"
+        android:layout_width="363dp"
+        android:layout_height="240dp"
+        android:orientation="vertical"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id_pregunta">
+
+        <CheckBox
+            android:id="@+id/checkBox1"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="@string/Answer12"
+            android:textColor="?attr/textColor"
+            android:buttonTint="#010315" />
+
+        <CheckBox
+            android:id="@+id/checkBox2"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="@string/Answer22"
+            android:textColor="?attr/textColor"
+            android:buttonTint="#010315" />
+
+        <CheckBox
+            android:id="@+id/checkBox3"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="@string/Answer32"
+            android:textColor="?attr/textColor"
+            android:buttonTint="#010315" />
+
+        <CheckBox
+            android:id="@+id/checkBox4"
+            android:layout_width="match_parent"
+            android:layout_height="59dp"
+            android:text="@string/Answer42"
+            android:textColor="?attr/textColor"
+            android:buttonTint="#010315" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="245dp"
+        android:layout_height="119dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.264" />
+
+    <TextView
+        android:id="@+id/tusRespuestas"
+        android:layout_width="match_parent"
+        android:layout_height="50pt"
+        android:text="@string/RESPUESTAS"
+        android:textSize="40sp"
+        android:visibility="invisible"
+        android:layout_gravity="center|right"
+        android:gravity="center|right"
+        android:textAlignment="center"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="260pt"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tusRespuestas"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <!--
+    <Button
+        android:id="@+id/BackButton"
+        style="@android:style/Widget.Holo.CompoundButton.Star"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/colorButton"
+        android:textColor="#000000"
+        android:onClick="back"
+        android:text="@string/Back"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.066"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023" />
+        -->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
