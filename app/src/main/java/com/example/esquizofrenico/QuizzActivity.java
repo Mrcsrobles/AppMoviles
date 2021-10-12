@@ -198,89 +198,97 @@ public class QuizzActivity extends AppCompatActivity {
         LinearLayout linearLayout = findViewById(R.id.GroupId2);
         TextView question = findViewById(R.id.id_pregunta);
         if (questionNumber < 7) {
-            question.setText(questions.get(questionNumber).getText());
-            if (!questions.get(questionNumber).isCheckButton()) {
-                rg.setVisibility(View.VISIBLE);
-                linearLayout.setVisibility(View.INVISIBLE);
-                for (int i = 0; i < radioButtons.length; i++) {
-                    RadioButton rb = findViewById(radioButtons[i]);
-                    rb.setText(questions.get(questionNumber).getAnswersTexts().get(i).getText());
-                    if (questions.get(questionNumber).getAnswersTexts().get(i).isCorrect()) {
-                        rb.setTag(true); // añado como etiqueta del radiobutton el verdadero
-                    } else {
-                        rb.setTag(false);
-                    }
-                }
-                rg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-                    @Override
-                    public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                        Button next = findViewById(R.id.next_question);
-                        next.setEnabled(radioGroup.getCheckedRadioButtonId() != -1);
-                    }
-                });
-            } else {
-                linearLayout.setVisibility(View.VISIBLE);
-                rg.setVisibility(View.INVISIBLE);
-                final Button next = findViewById(R.id.next_question);
-                for (int i = 0; i < checkBoxes.length; i++) {
-                    CheckBox checkBox = findViewById(checkBoxes[i]);
-                    checkBox.setText(questions.get(questionNumber).getAnswersTexts().get(i).getText());
-                    if (questions.get(questionNumber).getAnswersTexts().get(i).isCorrect()) {
-                        checkBox.setTag(true); // añado como etiqueta del radiobutton el verdadero
-                    } else {
-                        checkBox.setTag(false);
-                    }
-                    checkBox.setOnCheckedChangeListener(new OnCheckedChangeListener() {
-                        @Override
-                        public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
-                            next.setEnabled(isChecked);
-                        }
-                    });
+            initQuestions(questions, rg, linearLayout, question);
+        } else {
+            initImageQuestions(questionsImages, rg, linearLayout, question);
+        }
+    }
+
+    private void initImageQuestions(ArrayList<QuestionsImages> questionsImages, RadioGroup rg, LinearLayout linearLayout, TextView question) {
+        ImageView imageView = findViewById(R.id.imageView);
+        imageView.setVisibility(View.VISIBLE);
+        imageView.setBackgroundResource(questionsImages.get(questionNumber - 7).getImage());
+        question.setText(questionsImages.get(questionNumber - 7).getText());
+        if (!questionsImages.get(questionNumber - 7).isCheckButton()) {
+            rg.setVisibility(View.VISIBLE);
+            linearLayout.setVisibility(View.INVISIBLE);
+            for (int i = 0; i < radioButtons.length; i++) {
+                RadioButton rb = findViewById(radioButtons[i]);
+                rb.setText(questionsImages.get(questionNumber - 7).getAnswersTexts().get(i).getText());
+                if (questionsImages.get(questionNumber - 7).getAnswersTexts().get(i).isCorrect()) {
+                    rb.setTag(true);
+                } else {
+                    rb.setTag(false);
                 }
             }
-        } else {
-            ImageView imageView = findViewById(R.id.imageView);
-            imageView.setVisibility(View.VISIBLE);
-            imageView.setBackgroundResource(questionsImages.get(questionNumber - 7).getImage());
-            question.setText(questionsImages.get(questionNumber - 7).getText());
-            if (!questionsImages.get(questionNumber - 7).isCheckButton()) {
-                rg.setVisibility(View.VISIBLE);
-                linearLayout.setVisibility(View.INVISIBLE);
-                for (int i = 0; i < radioButtons.length; i++) {
-                    RadioButton rb = findViewById(radioButtons[i]);
-                    rb.setText(questionsImages.get(questionNumber - 7).getAnswersTexts().get(i).getText());
-                    if (questionsImages.get(questionNumber - 7).getAnswersTexts().get(i).isCorrect()) {
-                        rb.setTag(true);
-                    } else {
-                        rb.setTag(false);
-                    }
+            rg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                    Button next = findViewById(R.id.next_question);
+                    next.setEnabled(radioGroup.getCheckedRadioButtonId() != -1);
                 }
-                rg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            });
+        } else {
+            linearLayout.setVisibility(View.VISIBLE);
+            rg.setVisibility(View.INVISIBLE);
+            final Button next = findViewById(R.id.next_question);
+            for (int i = 0; i < checkBoxes.length; i++) {
+                CheckBox checkBox = findViewById(checkBoxes[i]);
+                checkBox.setText(questionsImages.get(questionNumber - 7).getAnswersTexts().get(i).getText());
+                if (questionsImages.get(questionNumber - 7).getAnswersTexts().get(i).isCorrect()) {
+                    checkBox.setTag(true);
+                } else {
+                    checkBox.setTag(false);
+                }
+                checkBox.setOnCheckedChangeListener(new OnCheckedChangeListener() {
                     @Override
-                    public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                        Button next = findViewById(R.id.next_question);
-                        next.setEnabled(radioGroup.getCheckedRadioButtonId() != -1);
+                    public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
+                        next.setEnabled(isChecked);
                     }
                 });
-            } else {
-                linearLayout.setVisibility(View.VISIBLE);
-                rg.setVisibility(View.INVISIBLE);
-                final Button next = findViewById(R.id.next_question);
-                for (int i = 0; i < checkBoxes.length; i++) {
-                    CheckBox checkBox = findViewById(checkBoxes[i]);
-                    checkBox.setText(questionsImages.get(questionNumber - 7).getAnswersTexts().get(i).getText());
-                    if (questionsImages.get(questionNumber - 7).getAnswersTexts().get(i).isCorrect()) {
-                        checkBox.setTag(true);
-                    } else {
-                        checkBox.setTag(false);
-                    }
-                    checkBox.setOnCheckedChangeListener(new OnCheckedChangeListener() {
-                        @Override
-                        public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
-                            next.setEnabled(isChecked);
-                        }
-                    });
+            }
+        }
+    }
+
+    private void initQuestions(ArrayList<QuestionsText> questions, RadioGroup rg, LinearLayout linearLayout, TextView question) {
+        question.setText(questions.get(questionNumber).getText());
+        if (!questions.get(questionNumber).isCheckButton()) {
+            rg.setVisibility(View.VISIBLE);
+            linearLayout.setVisibility(View.INVISIBLE);
+            for (int i = 0; i < radioButtons.length; i++) {
+                RadioButton rb = findViewById(radioButtons[i]);
+                rb.setText(questions.get(questionNumber).getAnswersTexts().get(i).getText());
+                if (questions.get(questionNumber).getAnswersTexts().get(i).isCorrect()) {
+                    rb.setTag(true); // añado como etiqueta del radiobutton el verdadero
+                } else {
+                    rb.setTag(false);
                 }
+            }
+            rg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                    Button next = findViewById(R.id.next_question);
+                    next.setEnabled(radioGroup.getCheckedRadioButtonId() != -1);
+                }
+            });
+        } else {
+            linearLayout.setVisibility(View.VISIBLE);
+            rg.setVisibility(View.INVISIBLE);
+            final Button next = findViewById(R.id.next_question);
+            for (int i = 0; i < checkBoxes.length; i++) {
+                CheckBox checkBox = findViewById(checkBoxes[i]);
+                checkBox.setText(questions.get(questionNumber).getAnswersTexts().get(i).getText());
+                if (questions.get(questionNumber).getAnswersTexts().get(i).isCorrect()) {
+                    checkBox.setTag(true); // añado como etiqueta del radiobutton el verdadero
+                } else {
+                    checkBox.setTag(false);
+                }
+                checkBox.setOnCheckedChangeListener(new OnCheckedChangeListener() {
+                    @Override
+                    public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
+                        next.setEnabled(isChecked);
+                    }
+                });
             }
         }
     }
