@@ -342,20 +342,10 @@ public class QuizzActivity extends AppCompatActivity {
                     recreate(); // en lugar de estar creando tantas activities por cada pregunta que haya, es mejor reutilizar la misma activity con este metodo, por lo que solo nos interesa actualizar el numero de pregunta correspondiente
                 }
             }, 1000); //Time in milisecond
-        }
-
-        else {
+        } else {
             final Intent intent = new Intent(this, Answers.class);
-
-            Button complete = findViewById(R.id.last_question);
-            complete.setVisibility(View.VISIBLE);
-
-            complete.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    startActivity(intent);
-                }
-            });
+            startActivity(intent);
+            
         }
     }
 }
