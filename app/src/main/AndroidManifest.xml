@@ -18,6 +18,8 @@
         </activity>
         <activity android:name=".QuizzActivity"></activity>
         <activity android:name=".ScoreActivity"></activity>
+        <activity android:name=".Answers"></activity>
+
     </application>
 
 </manifest>

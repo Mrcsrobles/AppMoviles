@@ -4,14 +4,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.ListView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -336,7 +334,7 @@ public class QuizzActivity extends AppCompatActivity {
             }
         }
         System.out.println("Pregunta: " + questionNumber);
-        if (questionNumber < 8) {
+        if (questionNumber < 7) {
             questionNumber++;
             new Handler().postDelayed(new Runnable() {
                 @Override
@@ -344,40 +342,13 @@ public class QuizzActivity extends AppCompatActivity {
                     recreate(); // en lugar de estar creando tantas activities por cada pregunta que haya, es mejor reutilizar la misma activity con este metodo, por lo que solo nos interesa actualizar el numero de pregunta correspondiente
                 }
             }, 1000); //Time in milisecond
-        } else {
+        }
 
-            TextView respuestas = findViewById(R.id.tusRespuestas);
-            respuestas.setVisibility(View.VISIBLE);
-            ListView listView = findViewById(R.id.listview);
-            ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, MainActivity.Answers);
-            listView.setAdapter(adapter);
-            listView.setVisibility(View.VISIBLE);
-            final Intent intent = new Intent(this, ScoreActivity.class);
-
-            Button next = findViewById(R.id.next_question);
-            next.setVisibility(View.INVISIBLE);
+        else {
+            final Intent intent = new Intent(this, Answers.class);
 
             Button complete = findViewById(R.id.last_question);
             complete.setVisibility(View.VISIBLE);
-
-            new Handler().postDelayed(new Runnable() {
-                @Override
-                public void run() {
-                    TextView acierto = findViewById(R.id.acierto);
-                    acierto.setVisibility(View.INVISIBLE);
-                    TextView fallo = findViewById(R.id.fallo);
-                    fallo.setVisibility(View.INVISIBLE);
-                }
-            }, 1000); //Time in milisecond
-
-            TextView ask = findViewById(R.id.id_pregunta);
-            ask.setVisibility(View.INVISIBLE);
-            ImageView imageView = findViewById(R.id.imageView);
-            imageView.setVisibility(View.INVISIBLE);
-            LinearLayout ly = findViewById(R.id.GroupId2);
-            ly.setVisibility(View.INVISIBLE);
-            RadioGroup rg = findViewById(R.id.GroupId);
-            rg.setVisibility(View.INVISIBLE);
 
             complete.setOnClickListener(new View.OnClickListener() {
                 @Override
