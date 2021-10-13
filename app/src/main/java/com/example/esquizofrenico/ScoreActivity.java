@@ -7,6 +7,8 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.airbnb.lottie.LottieAnimationView;
+
 import java.util.Objects;
 
 public class ScoreActivity extends AppCompatActivity {
@@ -32,7 +34,10 @@ public class ScoreActivity extends AppCompatActivity {
         npoints.setVisibility(View.VISIBLE);
         TextView points = findViewById(R.id.textPoints);
         points.setVisibility(View.VISIBLE);
-
+        if (MainActivity.score>0){
+            LottieAnimationView animationView =findViewById(R.id.animation_view);
+            animationView.setVisibility(View.VISIBLE);
+        }
     }
 
 
