@@ -135,50 +135,6 @@
             android:textColor="?attr/textColor" />
     </RadioGroup>
 
-    <LinearLayout
-        android:id="@+id/GroupId2"
-        android:layout_width="363dp"
-        android:layout_height="240dp"
-        android:orientation="vertical"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/id_pregunta">
-
-        <CheckBox
-            android:id="@+id/checkBox1"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:buttonTint="#010315"
-            android:text="@string/Answer12"
-            android:textColor="?attr/textColor" />
-
-        <CheckBox
-            android:id="@+id/checkBox2"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:buttonTint="#010315"
-            android:text="@string/Answer22"
-            android:textColor="?attr/textColor" />
-
-        <CheckBox
-            android:id="@+id/checkBox3"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:buttonTint="#010315"
-            android:text="@string/Answer32"
-            android:textColor="?attr/textColor" />
-
-        <CheckBox
-            android:id="@+id/checkBox4"
-            android:layout_width="match_parent"
-            android:layout_height="59dp"
-            android:buttonTint="#010315"
-            android:text="@string/Answer42"
-            android:textColor="?attr/textColor" />
-    </LinearLayout>
-
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="245dp"
