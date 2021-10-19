@@ -139,33 +139,12 @@
         android:id="@+id/imageView"
         android:layout_width="245dp"
         android:layout_height="119dp"
-        android:visibility="invisible"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.264" />
-
-    <TextView
-        android:id="@+id/tusRespuestas"
-        android:layout_width="match_parent"
-        android:layout_height="50pt"
-        android:layout_gravity="center|right"
-        android:gravity="center|right"
-        android:text="@string/RESPUESTAS"
-        android:textAlignment="center"
-        android:textSize="40sp"
-        android:visibility="invisible"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ListView
-        android:id="@+id/listview"
-        android:layout_width="match_parent"
-        android:layout_height="260pt"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tusRespuestas"
-        tools:layout_editor_absoluteX="0dp" />
 
     <!--
     <Button

@@ -105,11 +105,11 @@ public class QuizzActivity extends AppCompatActivity {
 
 
         // Preguntas
-        QuestionsText qu1 = new QuestionsText(getString(R.string.Question1), false, att1);
-        QuestionsText qu2 = new QuestionsText(getString(R.string.Question2), false, att2);
-        QuestionsText qu3 = new QuestionsText(getString(R.string.Question3), false, att3);
-        QuestionsText qu4 = new QuestionsText(getString(R.string.Question4), false, att4);
-        QuestionsText qu5 = new QuestionsText(getString(R.string.Question5), false, att5);
+        QuestionsText qu1 = new QuestionsText(getString(R.string.Question1), att1);
+        QuestionsText qu2 = new QuestionsText(getString(R.string.Question2), att2);
+        QuestionsText qu3 = new QuestionsText(getString(R.string.Question3), att3);
+        QuestionsText qu4 = new QuestionsText(getString(R.string.Question4), att4);
+        QuestionsText qu5 = new QuestionsText(getString(R.string.Question5), att5);
 
 
         ArrayList<QuestionsText> questions = new ArrayList<>();
@@ -148,9 +148,9 @@ public class QuizzActivity extends AppCompatActivity {
         att2.add(at24);
 
         int resourceId1 = this.getResources().getIdentifier("nicaragua", "drawable", this.getPackageName());
-        QuestionsImages que1 = new QuestionsImages(resourceId1, getString(R.string.Question8), false, att1);
+        QuestionsImages que1 = new QuestionsImages(resourceId1, getString(R.string.Question8), att1);
         int resourceId2 = this.getResources().getIdentifier("monalisa", "drawable", this.getPackageName());
-        QuestionsImages que2 = new QuestionsImages(resourceId2, getString(R.string.Question9), false, att2);
+        QuestionsImages que2 = new QuestionsImages(resourceId2, getString(R.string.Question9), att2);
 
         ArrayList<QuestionsImages> questionsImages = new ArrayList<>();
         questionsImages.add(que1);
@@ -172,6 +172,7 @@ public class QuizzActivity extends AppCompatActivity {
     private void initImageQuestions(ArrayList<QuestionsImages> questionsImages, RadioGroup rg, TextView question) {
         ImageView imageView = findViewById(R.id.imageView);
         imageView.setBackgroundResource(questionsImages.get(questionNumber - 5).getImage());
+        imageView.setVisibility(View.VISIBLE);
         question.setText(questionsImages.get(questionNumber - 5).getText());
         rg.setVisibility(View.VISIBLE);
         for (int i = 0; i < radioButtons.length; i++) {
