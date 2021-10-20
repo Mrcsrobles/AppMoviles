@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/bgColor"
+    tools:context=".ScoreActivity">
+
+
+    <TextView
+        android:id="@+id/textPoints"
+        android:layout_width="300dp"
+        android:layout_height="112dp"
+        android:layout_marginTop="120dp"
+        android:text="@string/Points"
+        android:textAlignment="center"
+        android:textColor="?attr/textColor"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/finalPoints"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_marginTop="24dp"
+        android:textAlignment="center"
+        android:textColor="?attr/textColor"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textPoints" />
+
+    <Button
+        android:id="@+id/restart"
+        style="@android:style/Widget.Material.Light.Button"
+        android:layout_width="120pt"
+        android:layout_height="65dp"
+        android:layout_marginTop="244dp"
+        android:background="@drawable/main_button"
+        android:onClick="restartGame"
+        android:text="@string/REINTENTAR"
+        android:textColor="@color/colorStart"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textPoints" />
+
+    <Button
+        android:id="@+id/back"
+        android:layout_width="120pt"
+        android:layout_height="65dp"
+        android:layout_marginTop="25pt"
+        android:background="@drawable/main_button_2"
+        android:onClick="back"
+        android:text="@string/INICIO"
+        android:textColor="@color/colorExit"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/restart" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
