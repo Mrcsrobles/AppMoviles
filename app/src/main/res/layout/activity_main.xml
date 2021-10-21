@@ -9,54 +9,27 @@
 
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="46dp"
-        android:layout_marginStart="20pt"
-        android:text="ES"
-        android:textAlignment="center"
-        android:textColor="?attr/textColor"
-        android:textSize="40sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView4"
-        app:layout_constraintEnd_toStartOf="@+id/textView2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="46dp"
-        android:text="QUIZ"
+        android:text="QUIZ GAME"
         android:textAlignment="center"
         android:textColor="?attr/textColor"
         android:textSize="40sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView4"
-        app:layout_constraintEnd_toStartOf="@+id/textView3"
-        app:layout_constraintStart_toEndOf="@+id/textView"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="46dp"
-        android:layout_marginEnd="20pt"
-        android:text="OFRENICO"
-        android:textAlignment="center"
-        android:textColor="?attr/textColor"
-        android:textSize="40sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/textView4"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.5" />
+        app:layout_constraintVertical_bias="0.481" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Acepta el reto y averigua las respuestas correctas!"
+        android:text="¡Pulsa el botón JUGAR para comenzar!"
         android:textAlignment="center"
-        android:textColor="?attr/metaTextColor"
+        android:textColor="?attr/textColor"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -66,15 +39,15 @@
 
 
     <Button
-        style="@android:style/Widget.Material.Light.Button"
+        android:id="@+id/start"
         android:layout_width="219dp"
         android:layout_height="65dp"
         android:layout_marginTop="60pt"
         android:layout_marginBottom="50pt"
-        android:background="@drawable/drawable"
+        android:background="@drawable/main_button"
         android:onClick="startGame"
         android:text="@string/EMPEZAR"
-        android:textColor="@color/colorPrimary"
+        android:textColor="@color/colorStart"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/exit"
         app:layout_constraintEnd_toEndOf="parent"
@@ -88,28 +61,14 @@
         android:layout_width="219dp"
         android:layout_height="65dp"
         android:layout_marginBottom="96dp"
-        android:background="@drawable/drawable"
+        android:background="@drawable/main_button_2"
         android:onClick="exitGame"
         android:text="@string/SALIR"
-        android:textColor="@color/colorWrong"
+        android:textColor="@color/colorExit"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
-
-    <Switch
-        android:id="@+id/switchTheme"
-        android:layout_width="197dp"
-        android:layout_height="51dp"
-        android:onClick="switchTheme"
-        android:text="Tema oscuro"
-        android:textColor="?attr/metaTextColor"
-        app:layout_constraintBottom_toTopOf="@+id/textView3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.855"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.526" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

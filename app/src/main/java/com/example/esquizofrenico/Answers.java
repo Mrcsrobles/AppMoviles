@@ -21,11 +21,7 @@ public class Answers extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (MainActivity.checked) {
-            setTheme(R.style.DarkTheme);
-        } else {
-            setTheme(R.style.LightTheme);
-        }
+        setTheme(R.style.LightTheme);
         setContentView(R.layout.activity_answers);
         Objects.requireNonNull(getSupportActionBar()).hide();
 

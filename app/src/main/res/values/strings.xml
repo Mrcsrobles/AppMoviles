@@ -1,16 +1,18 @@
 <resources>
-    <string name="app_name">EsQUIZofrenico</string>
-    <string name="Points">PUNTUACION FINAL:</string>
+    <string name="app_name">QUIZ GAME</string>
+    <string name="Points">PUNTUACIÓN FINAL:</string>
+    <string name="Back">Atras</string>
     <string name="Ask">Pregunta</string>
     <string name="Next">Siguiente</string>
-    <string name="Finish">Finish</string>
+    <string name="Repeat">Reintentar</string>
+    <string name="Finish">Terminar</string>
     <string name="SALIR">SALIR</string>
-    <string name="EMPEZAR">EMPEZAR</string>
+    <string name="EMPEZAR">JUGAR</string>
     <string name="REINTENTAR">REINTENTAR</string>
-    <string name="INICIO">MENU PRINCIPAL</string>
+    <string name="INICIO">MENÚ PRINCIPAL</string>
     <string name="RESPUESTAS">RESPUESTAS SELECCIONADAS:</string>
-    <string name="Acierto">¡Respuesta correcta!</string>
-    <string name="Fallo">¡Respuesta incorrecta!</string>
+    <string name="Acierto">¡CORRECTO!</string>
+    <string name="Fallo">¡UPS, HAS FALLADO!</string>
     <string name="Question1">¿Qué edad tenía el rey Juan Carlos cuando "accidentalmente" disparó a su hermano?</string>
     <string name="Answer11">12</string>
     <string name="Answer12">18</string>
@@ -65,4 +67,7 @@
     <string name="Answer93">Lionel Messi</string>
     <string name="Answer94">Leonardo De Deus</string>
 
+    <string name="Puntos">Puntos:</string>
+    <string name="Npuntos">Npuntos</string>
+    <string name="nPoints">nPoints</string>
 </resources>
