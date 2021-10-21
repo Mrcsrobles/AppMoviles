@@ -10,14 +10,15 @@
 
     <TextView
         android:id="@+id/textPoints"
-        android:layout_width="wrap_content"
-        android:layout_height="46dp"
-        android:layout_marginTop="152dp"
+        android:layout_width="300dp"
+        android:layout_height="112dp"
+        android:layout_marginTop="120dp"
         android:text="@string/Points"
         android:textAlignment="center"
         android:textColor="?attr/textColor"
         android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -38,43 +39,29 @@
         style="@android:style/Widget.Material.Light.Button"
         android:layout_width="120pt"
         android:layout_height="65dp"
-
         android:layout_marginTop="244dp"
-        android:background="@drawable/drawable"
+        android:background="@drawable/main_button"
         android:onClick="restartGame"
         android:text="@string/REINTENTAR"
-        android:textColor="@color/colorPrimary"
-        android:textSize="30sp"
+        android:textColor="@color/colorStart"
+        android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textPoints" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/back"
         android:layout_width="120pt"
         android:layout_height="65dp"
         android:layout_marginTop="25pt"
-        android:background="@drawable/drawable"
+        android:background="@drawable/main_button_2"
         android:onClick="back"
         android:text="@string/INICIO"
-        android:textColor="@color/colorWrong"
-        android:textSize="30sp"
+        android:textColor="@color/colorExit"
+        android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/restart" />
 
-    <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/animation_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:lottie_autoPlay="true"
-        app:lottie_fileName="confetti.json"
-        app:lottie_loop="false" />
 </androidx.constraintlayout.widget.ConstraintLayout>
