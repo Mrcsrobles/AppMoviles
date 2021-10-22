@@ -9,6 +9,11 @@ public class AnswersText {
         this.correct = correct;
     }
 
+    public AnswersText(int i, String string, boolean b) {
+        correct = false;
+        text = null;
+    }
+
     public String getText() {
         return text;
     }
