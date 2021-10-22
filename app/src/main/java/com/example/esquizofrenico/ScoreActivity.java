@@ -9,6 +9,7 @@ import android.widget.EditText;
 import android.widget.Switch;
 import android.widget.TextView;
 
+import com.airbnb.lottie.LottieAnimationView;
 import com.example.esquizofrenico.models.QuestionsText;
 
 import java.util.ArrayList;
@@ -32,7 +33,10 @@ public class ScoreActivity extends AppCompatActivity {
         npoints.setVisibility(View.VISIBLE);
         TextView points = findViewById(R.id.textPoints);
         points.setVisibility(View.VISIBLE);
-
+        if (MainActivity.score>0){
+            LottieAnimationView animationView =findViewById(R.id.animation_view);
+            animationView.setVisibility(View.VISIBLE);
+        }
     }
 
     public void restartGame(View view) {

@@ -21,7 +21,6 @@
         <activity android:name=".ScoreActivity">
         </activity>
         <activity android:name=".Answers">
-            
         </activity>
     </application>
 
