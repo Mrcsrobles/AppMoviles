@@ -69,9 +69,10 @@
         android:layout_width="120dp"
         android:layout_height="46dp"
         android:background="@drawable/drawable"
-        android:enabled="false"
+        android:enabled="true"
         android:onClick="nextQuestion"
         android:text="@string/Next"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.917"
@@ -84,28 +85,13 @@
         android:layout_width="120dp"
         android:layout_height="46dp"
         android:background="@drawable/drawable"
-        android:enabled="false"
-        android:onClick="restartGame"
+        android:enabled="true"
+        android:onClick="restart"
         android:text="@string/Repeat"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.117"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.948" />
-
-    <Button
-        android:id="@+id/last_question"
-        android:layout_width="120dp"
-        android:layout_height="46dp"
-        android:background="@drawable/drawable"
-        android:onClick="nextQuestion"
-        android:text="@string/Finish"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.917"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.948" />
@@ -217,6 +203,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.264" />
+
+    <Button
+        android:id="@+id/comprobar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="checkCorrectAnswer"
+        android:text="Comprobar"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.521"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/GroupId"
+        app:layout_constraintVertical_bias="0.198"
+        tools:visibility="visible" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

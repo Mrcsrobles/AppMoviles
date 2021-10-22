@@ -183,7 +183,7 @@ public class QuizzActivity extends AppCompatActivity {
         rg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                Button next = findViewById(R.id.next_question);
+                Button next = findViewById(R.id.comprobar);
                 next.setEnabled(radioGroup.getCheckedRadioButtonId() != -1);
             }
         });
@@ -193,6 +193,8 @@ public class QuizzActivity extends AppCompatActivity {
     private void initQuestions(ArrayList<QuestionsText> questions, RadioGroup rg, TextView question) {
         question.setText(questions.get(questionNumber).getText());
         rg.setVisibility(View.VISIBLE);
+
+        findViewById(R.id.comprobar).setEnabled(false);
         for (int i = 0; i < radioButtons.length; i++) {
             RadioButton rb = findViewById(radioButtons[i]);
             rb.setText(questions.get(questionNumber).getAnswersTexts().get(i).getText());
@@ -205,7 +207,7 @@ public class QuizzActivity extends AppCompatActivity {
         rg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                Button next = findViewById(R.id.next_question);
+                Button next = findViewById(R.id.comprobar);
                 next.setEnabled(radioGroup.getCheckedRadioButtonId() != -1);
             }
         });
@@ -214,10 +216,29 @@ public class QuizzActivity extends AppCompatActivity {
 
     public void nextQuestion(View view) {
 
+        if (questionNumber < 5) {
+            questionNumber++;
+            recreate();
+        } else {
+            final Intent intent = new Intent(this, Answers.class);
+            startActivity(intent);
+
+        }
+    }
+
+    public void checkCorrectAnswer(View view) {
         RadioGroup radioGroup = findViewById(R.id.GroupId);
         int id = radioGroup.getCheckedRadioButtonId();
         RadioButton selected = findViewById(id);
         MainActivity.Answers.add(selected.getText().toString());
+
+        Button seguir = findViewById(R.id.next_question);
+        seguir.bringToFront();
+        seguir.setVisibility(View.VISIBLE);
+
+        Button comprobar = findViewById(R.id.comprobar);
+        comprobar.setVisibility(View.INVISIBLE);
+
         if ((boolean) selected.getTag()) {
             System.out.println("Seleccionaste la correcta");
             MainActivity.score += 3;
@@ -227,29 +248,24 @@ public class QuizzActivity extends AppCompatActivity {
         } else {
             System.out.println("Seleccionaste la falsa");
             MainActivity.score -= 2;
+
             TextView fallo = findViewById(R.id.fallo);
             fallo.bringToFront();
             fallo.setVisibility(View.VISIBLE);
-        }
-        selected.setChecked(false);
-        if (questionNumber < 5) {
-            questionNumber++;
-            new Handler().postDelayed(new Runnable() {
-                @Override
-                public void run() {
-                    recreate(); // en lugar de estar creando tantas activities por cada pregunta que haya, es mejor reutilizar la misma activity con este metodo, por lo que solo nos interesa actualizar el numero de pregunta correspondiente
-                }
-            }, 1000); //Time in milisecond
-        } else {
-            final Intent intent = new Intent(this, Answers.class);
-            startActivity(intent);
+            fallo.setEnabled(true);
+
+            Button repetir = findViewById(R.id.repeat);
+            repetir.bringToFront();
+            repetir.setVisibility(View.VISIBLE);
 
         }
+        selected.setChecked(false);
     }
 
     public void restart(View view) {
-        QuizzActivity.questionNumber = QuizzActivity.questionNumber;
-        MainActivity.score = MainActivity.score;
+        QuizzActivity.questionNumber = 0;
+        MainActivity.score = 0;
+        MainActivity.Answers.clear();
         Intent intent = new Intent(this, QuizzActivity.class);
         startActivity(intent);
     }
