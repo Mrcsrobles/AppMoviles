@@ -35,7 +35,7 @@ public class ScoreActivity extends AppCompatActivity {
 
     }
 
-    public void restartGame(View view) {
+    public void restart(View view) {
         QuizzActivity.questionNumber = 0;
         MainActivity.score = 0;
         Intent intent = new Intent(this, QuizzActivity.class);

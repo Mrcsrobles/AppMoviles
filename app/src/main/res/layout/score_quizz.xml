@@ -41,7 +41,7 @@
         android:layout_height="65dp"
         android:layout_marginTop="244dp"
         android:background="@drawable/main_button"
-        android:onClick="restartGame"
+        android:onClick="restart"
         android:text="@string/REINTENTAR"
         android:textColor="@color/colorStart"
         android:textSize="25sp"

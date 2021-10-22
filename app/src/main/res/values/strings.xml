@@ -43,29 +43,17 @@
     <string name="Answer53">Árabe</string>
     <string name="Answer54">Hindú</string>
 
-    <string name="Question6">¿Cuales de estos juegos han sido GOTY(Game Of The Year)?</string>
-    <string name="Answer61">League Of Legends</string>
-    <string name="Answer62">Buscaminas</string>
-    <string name="Answer63">The Witcher 3</string>
-    <string name="Answer64">God of War</string>
+    <string name="Question6">¿A que país pertenece esta bandera?</string>
+    <string name="Answer61">España</string>
+    <string name="Answer62">Argentina</string>
+    <string name="Answer63">Rusia</string>
+    <string name="Answer64">Nicaragua</string>
 
-    <string name="Question7">¿Quienes de estos personajes se iban de Los Simpsons?</string>
-    <string name="Answer71">Moe Szyslak</string>
-    <string name="Answer72">Apu Nahasapeemapetilon</string>
-    <string name="Answer73">Barney Gumble</string>
-    <string name="Answer74">Ned Flanders</string>
-
-    <string name="Question8">¿A que país pertenece esta bandera?</string>
-    <string name="Answer81">España</string>
-    <string name="Answer82">Argentina</string>
-    <string name="Answer83">Rusia</string>
-    <string name="Answer84">Nicaragua</string>
-
-    <string name="Question9">¿Quién pintó este magnífico cuadro?</string>
-    <string name="Answer91">Leonardo Da Vinci</string>
-    <string name="Answer92">Leonardo DiCaprio</string>
-    <string name="Answer93">Lionel Messi</string>
-    <string name="Answer94">Leonardo De Deus</string>
+    <string name="Question7">¿Quién pintó este magnífico cuadro?</string>
+    <string name="Answer71">Leonardo Da Vinci</string>
+    <string name="Answer72">Leonardo DiCaprio</string>
+    <string name="Answer73">Lionel Messi</string>
+    <string name="Answer74">Leonardo De Deus</string>
 
     <string name="Puntos">Puntos:</string>
     <string name="Npuntos">Npuntos</string>
