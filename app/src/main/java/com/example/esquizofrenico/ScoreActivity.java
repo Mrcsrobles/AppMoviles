@@ -24,6 +24,7 @@ public class ScoreActivity extends AppCompatActivity {
         setContentView(R.layout.score_quizz);
         getSupportActionBar().hide();
         fillData();
+        MainActivity.Answers.clear();
     }
 
     private void fillData() {
