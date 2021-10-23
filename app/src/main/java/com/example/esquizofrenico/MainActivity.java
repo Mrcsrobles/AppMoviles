@@ -17,7 +17,6 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    public static boolean checked = false;
     public static int score;
     public static ArrayList<String> Answers;
 

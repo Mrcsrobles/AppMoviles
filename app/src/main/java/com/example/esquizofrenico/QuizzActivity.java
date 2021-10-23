@@ -220,7 +220,7 @@ public class QuizzActivity extends AppCompatActivity {
             questionNumber++;
             recreate();
         } else {
-            final Intent intent = new Intent(this, Answers.class);
+            final Intent intent = new Intent(this, QuizImageAnswers.class);
             startActivity(intent);
 
         }
@@ -236,6 +236,9 @@ public class QuizzActivity extends AppCompatActivity {
         seguir.bringToFront();
         seguir.setVisibility(View.VISIBLE);
 
+        for ( int radio:radioButtons){
+            findViewById(radio).setEnabled(false);
+        }
         Button comprobar = findViewById(R.id.comprobar);
         comprobar.setVisibility(View.INVISIBLE);
 
