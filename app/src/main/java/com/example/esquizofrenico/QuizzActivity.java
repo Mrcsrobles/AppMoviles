@@ -2,7 +2,6 @@ package com.example.esquizofrenico;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -40,8 +39,8 @@ public class QuizzActivity extends AppCompatActivity {
     private ArrayList<QuestionsText> initAnswersAndQuestions() {
         //respuestas para pregunta 1
         AnswersText at11 = new AnswersText(getString(R.string.Answer11), false);
-        AnswersText at12 = new AnswersText(getString(R.string.Answer12), true);
-        AnswersText at13 = new AnswersText(getString(R.string.Answer13), false);
+        AnswersText at12 = new AnswersText(getString(R.string.Answer12), false);
+        AnswersText at13 = new AnswersText(getString(R.string.Answer13), true);
         AnswersText at14 = new AnswersText(getString(R.string.Answer14), false);
 
         ArrayList<AnswersText> att1 = new ArrayList<>();
@@ -51,8 +50,8 @@ public class QuizzActivity extends AppCompatActivity {
         att1.add(at14);
 
         //respuestas para pregunta 2
-        AnswersText at21 = new AnswersText(getString(R.string.Answer21), true);
-        AnswersText at22 = new AnswersText(getString(R.string.Answer22), false);
+        AnswersText at21 = new AnswersText(getString(R.string.Answer21), false);
+        AnswersText at22 = new AnswersText(getString(R.string.Answer22), true);
         AnswersText at23 = new AnswersText(getString(R.string.Answer23), false);
         AnswersText at24 = new AnswersText(getString(R.string.Answer24), false);
 
@@ -63,9 +62,9 @@ public class QuizzActivity extends AppCompatActivity {
         att2.add(at24);
 
         //respuestas para pregunta 3
-        AnswersText at31 = new AnswersText(getString(R.string.Answer31), false);
+        AnswersText at31 = new AnswersText(getString(R.string.Answer31), true);
         AnswersText at32 = new AnswersText(getString(R.string.Answer32), false);
-        AnswersText at33 = new AnswersText(getString(R.string.Answer33), true);
+        AnswersText at33 = new AnswersText(getString(R.string.Answer33), false);
         AnswersText at34 = new AnswersText(getString(R.string.Answer34), false);
 
         ArrayList<AnswersText> att3 = new ArrayList<>();
@@ -77,8 +76,8 @@ public class QuizzActivity extends AppCompatActivity {
         //respuestas para pregunta 4
         AnswersText at41 = new AnswersText(getString(R.string.Answer41), false);
         AnswersText at42 = new AnswersText(getString(R.string.Answer42), false);
-        AnswersText at43 = new AnswersText(getString(R.string.Answer43), true);
-        AnswersText at44 = new AnswersText(getString(R.string.Answer44), false);
+        AnswersText at43 = new AnswersText(getString(R.string.Answer43), false);
+        AnswersText at44 = new AnswersText(getString(R.string.Answer44), true);
 
         ArrayList<AnswersText> att4 = new ArrayList<>();
         att4.add(at41);
@@ -97,7 +96,6 @@ public class QuizzActivity extends AppCompatActivity {
         att5.add(at52);
         att5.add(at53);
         att5.add(at54);
-
 
 
         // Preguntas
@@ -121,10 +119,10 @@ public class QuizzActivity extends AppCompatActivity {
 
     private ArrayList<QuestionsImages> initQuestionsImages() {
 
-        AnswersText at11 = new AnswersText(getString(R.string.Answer81), false);
-        AnswersText at12 = new AnswersText(getString(R.string.Answer82), false);
-        AnswersText at13 = new AnswersText(getString(R.string.Answer83), false);
-        AnswersText at14 = new AnswersText(getString(R.string.Answer84), true);
+        AnswersText at11 = new AnswersText(getString(R.string.Answer61), false);
+        AnswersText at12 = new AnswersText(getString(R.string.Answer62), false);
+        AnswersText at13 = new AnswersText(getString(R.string.Answer63), false);
+        AnswersText at14 = new AnswersText(getString(R.string.Answer64), true);
 
         ArrayList<AnswersText> att1 = new ArrayList<>();
         att1.add(at11);
@@ -132,25 +130,13 @@ public class QuizzActivity extends AppCompatActivity {
         att1.add(at13);
         att1.add(at14);
 
-        AnswersText at21 = new AnswersText(getString(R.string.Answer91), true);
-        AnswersText at22 = new AnswersText(getString(R.string.Answer92), false);
-        AnswersText at23 = new AnswersText(getString(R.string.Answer93), false);
-        AnswersText at24 = new AnswersText(getString(R.string.Answer94), false);
-
-        ArrayList<AnswersText> att2 = new ArrayList<>();
-        att2.add(at21);
-        att2.add(at22);
-        att2.add(at23);
-        att2.add(at24);
 
         int resourceId1 = this.getResources().getIdentifier("nicaragua", "drawable", this.getPackageName());
-        QuestionsImages que1 = new QuestionsImages(resourceId1, getString(R.string.Question8), att1);
-        int resourceId2 = this.getResources().getIdentifier("monalisa", "drawable", this.getPackageName());
-        QuestionsImages que2 = new QuestionsImages(resourceId2, getString(R.string.Question9), att2);
+        QuestionsImages que1 = new QuestionsImages(resourceId1, getString(R.string.Question6), att1);
+
 
         ArrayList<QuestionsImages> questionsImages = new ArrayList<>();
         questionsImages.add(que1);
-        questionsImages.add(que2);
 
         return questionsImages;
     }

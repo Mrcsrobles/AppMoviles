@@ -8,8 +8,9 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="120dp"
+        android:layout_height="46dp"
+        android:background="@drawable/drawable"
         android:layout_marginBottom="16dp"
         android:text="Puntuación"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -25,7 +26,7 @@
         android:gravity="center|right"
         android:text="@string/RESPUESTAS"
         android:textAlignment="center"
-        android:textSize="40sp"
+        android:textSize="30sp"
         android:visibility="visible"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="39dp" />
